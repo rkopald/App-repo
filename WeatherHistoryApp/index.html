@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather History App</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css" integrity="sha256-bLNUHzSMEvxBhoysBE7EXYlIrmo7+n7F4oJra1IgOaM=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js" integrity="sha256-JIBDRWRB0n67sjMusTy4xZ9L09V8BINF0nd/UUUOi48=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Weather History</a>
+    </nav>
+  </head>
+  <body>
+    <div class='container'>
+        <br/>
+        <br/>
+        <br/>
+        <div class='row'>
+        <div class='col-2'>
+          <label>Location Zip</label>
+        </div>
+        <div class='col-2'>
+          <input type="text" class="input-sm form-control" id="location" name="location">
+        </div>
+        </div>
+        <br/>
+        <div class='row'>
+        <div class='col-2'>
+          <label>Date Range</label>
+        </div>
+        <div class='col-4'>
+            <div class="input-daterange input-group" id="datepicker">
+                <input type="text" class="input-sm form-control" id="start" name="start" />
+                <span class="input-group-addon">&nbsp to &nbsp</span>
+                <input type="text" class="input-sm form-control" id="end" name="end" />
+            </div>
+        </div>
+        </div>
+        <br/>
+        <div class='row'>
+        <div class='col'>
+          <button class="btn btn-outline-success" id="submitBtn">Submit</button>
+        </div>
+        </div>
+        <br/>
+    <div class='row'>
+        <div id="dataSummary"></div>
+        <div id="chartContainer" style="height: 400px; min-width: 600px"></div>
+    </div>
+    </div>
+  </body>
+</html>
